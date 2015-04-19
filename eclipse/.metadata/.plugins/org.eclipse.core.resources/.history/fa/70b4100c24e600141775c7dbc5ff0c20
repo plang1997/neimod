@@ -1,0 +1,52 @@
+package com.patricklang.neimod.init;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.patricklang.neimod.Reference;
+import com.patricklang.neimod.NEIMod;
+import com.patricklang.neimod.items.ItemMtnBlaster;
+
+public class TutorialItems {
+
+	public static Item test_item;
+	public static Item hot_sword;
+	public static Item TPhitstick;
+	public static Item TPstick;
+	public static Item mtnBlaster;
+
+	
+	
+	public static void init(){
+		test_item = new Item().setUnlocalizedName("test_item").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		hot_sword = new Item().setUnlocalizedName("hot_sword").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		TPhitstick = new Item().setUnlocalizedName("TPhitstick").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		TPstick = new Item().setUnlocalizedName("TPstick").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		mtnBlaster = new ItemMtnBlaster().setUnlocalizedName("mtnBlaster").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);;
+	}
+	
+	public static void register(){
+		GameRegistry.registerItem(test_item, test_item.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(hot_sword, hot_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPhitstick, TPhitstick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPstick, TPstick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(mtnBlaster, mtnBlaster.getUnlocalizedName().substring(5));
+	}
+	
+	public static void registerRenders(){
+		registerRender(test_item);
+		registerRender(hot_sword);
+		registerRender(TPhitstick);
+		registerRender(TPstick);
+		registerRender(mtnBlaster);
+	}
+	
+	public static void registerRender(Item item){
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
+
+	
+}

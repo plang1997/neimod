@@ -1,0 +1,144 @@
+package com.patricklang.neimod.init;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.patricklang.neimod.Reference;
+import com.patricklang.neimod.NEIMod;
+import com.patricklang.neimod.items.ItemMtnBlaster;
+
+public class TutorialItems {
+
+	public static Item StoneSword;
+	public static Item HotSword;
+	public static Item TPHitStick;
+	public static Item TPStick;
+	public static Item MountainBlaster;
+	public static Item BossDiamondSword;
+	public static Item CoalDagger;
+	public static Item CoalShard;
+	public static Item CobblestoneDagger;
+	public static Item CobblestoneShard;
+	public static Item DiamondDagger;
+	public static Item DiamondShard;
+	public static Item DogFood;
+	
+	public static Item EmeraldArrow;
+	public static Item EmeraldAxe;
+	public static Item EmeraldBow;
+	public static Item EmeraldDagger;
+	public static Item EmeraldHoe;
+	public static Item EmeraldPickaxe;
+	public static Item EmeraldShard;
+	public static Item EmeraldShovel;
+	public static Item EmeraldSword;
+	public static Item GoldDagger;
+	public static Item GoldShard;
+	public static Item Gun;
+	public static Item IronDagger;	
+	public static Item IronShard;
+	public static Item NinjaStar;
+	
+	public static void init(){
+		StoneSword = new Item().setUnlocalizedName("StoneSword").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		HotSword = new Item().setUnlocalizedName("HotSword").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		TPHitStick = new Item().setUnlocalizedName("TPHitStick").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		TPStick = new Item().setUnlocalizedName("TPStick").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		MountainBlaster = new ItemMtnBlaster().setUnlocalizedName("MountainBlaster").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);;
+		BossDiamondSword = new Item().setUnlocalizedName("BossDiamondSword").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CoalDagger = new Item().setUnlocalizedName("CoalDagger").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CoalShard = new Item().setUnlocalizedName("CoalShard").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CobblestoneDagger = new Item().setUnlocalizedName("CobblestoneDagger").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CobblestoneShard = new ItemMtnBlaster().setUnlocalizedName("CobblestoneShard").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);;
+		DiamondDagger = new Item().setUnlocalizedName("DiamondDagger").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		DiamondShard = new Item().setUnlocalizedName("DiamondShard").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		DogFood = new ItemFood(2, 0.5F, true ).setUnlocalizedName("DogFood").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldArrow = new Item().setUnlocalizedName("EmeraldArrow").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldAxe = new Item().setUnlocalizedName("EmeraldAxe").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldBow = new Item().setUnlocalizedName("EmeraldBow").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldDagger = new Item().setUnlocalizedName("EmeraldDagger").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldHoe = new ItemMtnBlaster().setUnlocalizedName("EmeraldHoe").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);;
+		EmeraldPickaxe = new Item().setUnlocalizedName("EmeraldPickaxe").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldShard = new Item().setUnlocalizedName("EmeraldShard").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldShovel = new Item().setUnlocalizedName("EmeraldShovel").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		EmeraldSword = new Item().setUnlocalizedName("EmeraldSword").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		GoldDagger = new ItemMtnBlaster().setUnlocalizedName("GoldDagger").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);;
+		GoldShard = new Item().setUnlocalizedName("GoldShard").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		Gun = new Item().setUnlocalizedName("Gun").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		IronDagger = new Item().setUnlocalizedName("IronDagger").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		IronShard = new Item().setUnlocalizedName("IronShard").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+		NinjaStar = new Item().setUnlocalizedName("NinjaStar").setMaxStackSize(64).setCreativeTab(TutorialMod.tooManyItemsTab);
+	}
+	
+	public static void register(){
+		GameRegistry.registerItem(StoneSword, StoneSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(HotSword, HotSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPHitStick, TPHitStick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPStick, TPStick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(MountainBlaster, MountainBlaster.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(BossDiamondSword, BossDiamondSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CoalDagger, CoalDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CoalShard, CoalShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CobblestoneDagger, CobblestoneDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CobblestoneShard, CobblestoneShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(DiamondDagger, DiamondDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(DiamondShard, DiamondShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(DogFood, DogFood.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldArrow, EmeraldArrow.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldAxe, EmeraldAxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldBow, EmeraldBow.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldDagger, EmeraldDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldHoe, EmeraldHoe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldPickaxe, EmeraldPickaxe.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldShard, EmeraldShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldShovel, EmeraldShovel.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(EmeraldSword, EmeraldSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(GoldDagger, GoldDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(GoldShard, GoldShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Gun, Gun.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(IronDagger, IronDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(IronShard, IronShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(NinjaStar, NinjaStar.getUnlocalizedName().substring(5));
+	}
+	
+	public static void registerRenders(){
+		registerRender(StoneSword);
+		registerRender(HotSword);
+		registerRender(TPHitStick);
+		registerRender(TPStick);
+		registerRender(MountainBlaster);
+		registerRender(BossDiamondSword);
+		registerRender(CoalDagger);
+		registerRender(CoalShard);
+		registerRender(CobblestoneDagger);
+		registerRender(CobblestoneShard);
+		registerRender(DiamondDagger);
+		registerRender(DiamondShard);
+		registerRender(DogFood);
+		registerRender(EmeraldArrow);
+		registerRender(EmeraldAxe);
+		registerRender(EmeraldBow);
+		registerRender(EmeraldDagger);
+		registerRender(EmeraldHoe);
+		registerRender(EmeraldPickaxe);
+		registerRender(EmeraldShard);
+		registerRender(EmeraldShovel);
+		registerRender(EmeraldSword);
+		registerRender(GoldDagger);
+		registerRender(GoldShard);
+		registerRender(Gun);
+		registerRender(IronDagger);
+		registerRender(IronShard);
+		registerRender(NinjaStar);
+	}
+	
+	public static void registerRender(Item item){
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
+
+	
+}

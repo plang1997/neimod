@@ -1,0 +1,98 @@
+package com.patricklang.neimod.init;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.patricklang.neimod.Reference;
+import com.patricklang.neimod.TutorialMod;
+import com.patricklang.neimod.items.ItemMtnBlaster;
+
+public class TutorialItems {
+
+	public static Item StoneSword;
+	public static Item HotSword;
+	public static Item TPHitStick;
+	public static Item TPStick;
+	public static Item MountainBlaster;
+	public static Item BossDiamondSword;
+	public static Item CoalDagger;
+	public static Item CoalShard;
+	public static Item CobblestoneDagger;
+	public static Item CobblestoneShard;
+	public static Item DiamondDagger;
+	public static Item DiamondShard;
+	public static Item Dogfood;
+	
+	public static Item EmeraldArrow;
+	public static Item EmeraldAxe;
+	public static Item EmeraldBow;
+	public static Item EmeraldDagger;
+	public static Item EmeraldHoe;
+	public static Item EmeraldPickaxe;
+	public static Item EmeraldShard;
+	public static Item EmeraldShovel;
+	public static Item EmeraldSword;
+	public static Item GoldDagger;
+	public static Item GoldShard;
+	public static Item Gun;
+	public static Item IronDagger;	
+	public static Item IronShard;
+	public static Item NinjaStar;
+	
+	public static void init(){
+		StoneSword = new Item().setUnlocalizedName("test_item").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		HotSword = new Item().setUnlocalizedName("hot_sword").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		TPHitStick = new Item().setUnlocalizedName("TPhitstick").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		TPStick = new Item().setUnlocalizedName("TPstick").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		MountainBlaster = new ItemMtnBlaster().setUnlocalizedName("mtnBlaster").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);;
+		BossDiamondSword = new Item().setUnlocalizedName("BOSSDiamondSword").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CoalDagger = new Item().setUnlocalizedName("Coaldagger").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CoalShard = new Item().setUnlocalizedName("Coalshard").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CobblestoneDagger = new Item().setUnlocalizedName("Cobblestonedagger").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		CobblestoneShard = new ItemMtnBlaster().setUnlocalizedName("Cobblestoneshard").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);;
+		DiamondDagger = new Item().setUnlocalizedName("Diamonddagger").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		DiamondShard = new Item().setUnlocalizedName("Diamondshard").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+		Dogfood = new Item().setUnlocalizedName("Dogfood").setMaxStackSize(16).setCreativeTab(TutorialMod.tooManyItemsTab);
+	}
+	
+	public static void register(){
+		GameRegistry.registerItem(StoneSword, StoneSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(HotSword, HotSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPHitStick, TPHitStick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPStick, TPStick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(MountainBlaster, MountainBlaster.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(BossDiamondSword, BossDiamondSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CoalDagger, CoalDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CoalShard, CoalShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CobblestoneDagger, CobblestoneDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(CobblestoneShard, CobblestoneShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(DiamondDagger, DiamondDagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(DiamondShard, DiamondShard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Dogfood, Dogfood.getUnlocalizedName().substring(5));
+	}
+	
+	public static void registerRenders(){
+		registerRender(StoneSword);
+		registerRender(HotSword);
+		registerRender(TPHitStick);
+		registerRender(TPStick);
+		registerRender(MountainBlaster);
+		registerRender(BossDiamondSword);
+		registerRender(CoalDagger);
+		registerRender(CoalShard);
+		registerRender(CobblestoneDagger);
+		registerRender(CobblestoneShard);
+		registerRender(DiamondDagger);
+		registerRender(DiamondShard);
+		registerRender(Dogfood);
+	}
+	
+	public static void registerRender(Item item){
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
+
+	
+}

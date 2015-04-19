@@ -1,0 +1,9 @@
+package com.patricklang.tutorial.item;
+
+import net.minecraft.item.Item;
+
+public class ItemEmeraldArrow extends Item{
+	
+	
+
+}

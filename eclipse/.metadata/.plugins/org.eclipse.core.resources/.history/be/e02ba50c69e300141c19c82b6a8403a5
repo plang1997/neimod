@@ -1,0 +1,15 @@
+package com.generic;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+
+public class GenericItem extends Item {
+
+	public GenericItem() {
+		// Constructor Configuration
+		maxStackSize = 64;
+		setCreativeTab(CreativeTabs.tabMisc);
+		setUnlocalizedName("genericItem");		
+	}
+
+}

@@ -1,0 +1,70 @@
+package com.patricklang.tutorial.init;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.resources.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.patricklang.tutorial.Reference;
+import com.patricklang.tutorial.TutorialMod;
+import com.patricklang.tutorial.items.ItemMtnBlaster;
+
+public class TutorialItems {
+
+	public static Item test_item;
+	public static Item hot_sword;
+	public static Item TPhitstick;
+	public static Item TPstick;
+	public static Item mtnBlaster;
+	public static Item BOSSDiamondSword;
+	public static Item Coaldagger;
+	public static Item Coalshard;
+	public static Item Cobblestonedagger;
+	public static Item Cobblestoneshard;
+	public static Item Diamonddagger;
+	public static Item Diamondshard;
+	public static Item Dogfood;
+	
+	public static void init(){
+		c
+	}
+	
+	public static void register(){
+		GameRegistry.registerItem(test_item, test_item.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(hot_sword, hot_sword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPhitstick, TPhitstick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(TPstick, TPstick.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(mtnBlaster, mtnBlaster.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(BOSSDiamondSword, BOSSDiamondSword.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Coaldagger, Coaldagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Coalshard, Coalshard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Cobblestonedagger, Cobblestonedagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Cobblestoneshard, Cobblestoneshard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Diamonddagger, Diamonddagger.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Diamondshard, Diamondshard.getUnlocalizedName().substring(5));
+		GameRegistry.registerItem(Dogfood, Dogfood.getUnlocalizedName().substring(5));
+	}
+	
+	public static void registerRenders(){
+		registerRender(test_item);
+		registerRender(hot_sword);
+		registerRender(TPhitstick);
+		registerRender(TPstick);
+		registerRender(mtnBlaster);
+		registerRender(BOSSDiamondSword);
+		registerRender(Coaldagger);
+		registerRender(Coalshard);
+		registerRender(Cobblestonedagger);
+		registerRender(Cobblestoneshard);
+		registerRender(Diamonddagger);
+		registerRender(Diamondshard);
+		registerRender(Dogfood);
+	}
+	
+	public static void registerRender(Item item){
+		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+	}
+
+	
+}

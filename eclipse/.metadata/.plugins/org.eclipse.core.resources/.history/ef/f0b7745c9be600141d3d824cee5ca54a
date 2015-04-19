@@ -1,0 +1,7 @@
+package com.patricklang.tutorial.proxy;
+
+public class CommonProxy {
+	public void registerRenders(){
+		
+	}
+}

@@ -1,0 +1,5 @@
+package com.patricklang.neimod.item;
+
+public class ItemEmeraldShovel extends Item {
+
+}

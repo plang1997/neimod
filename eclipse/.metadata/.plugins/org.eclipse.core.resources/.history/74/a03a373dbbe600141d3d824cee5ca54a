@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tm",
+  "name": "Tutorial Mod",
+  "description": "1st Tutorial Mod",
+  "version": "1.0",
+  "mcversion": "1.8",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["TMMPapa","TMMMarcusLang"],
+  "credits": "Thank you MrCrayfish for the Modding Tutorials!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

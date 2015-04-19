@@ -1,0 +1,7 @@
+package com.patricklang.tutorial.item;
+
+import net.minecraft.item.ItemBow;
+
+public class ItemEmeraldBow extends ItemBow{
+
+}

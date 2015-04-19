@@ -1,0 +1,95 @@
+package com.patricklang.neimod;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemPotion;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
+import com.patricklang.neimod.init.NEIItems;
+import com.patricklang.neimod.proxy.CommonProxy;
+
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
+public class TutorialMod {
+	public static ItemStack stickStack;
+	public static ItemStack eyeOfEnderStack;
+	public static ItemStack emeraldStack;
+	public static ItemStack diamondStack;
+	public static ItemStack cobblestoneStack;
+	public static ItemStack coalStack;
+	public static ItemStack featherStack;
+	public static ItemStack stoneStack;
+	public static ItemStack flintStack;
+	
+	@SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
+	public static CommonProxy proxy;
+
+	@EventHandler
+	public void preInit(FMLPreInitializationEvent event){
+		TutorialItems.init();
+		TutorialItems.register();
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent event){
+		proxy.registerRenders();
+		stickStack = new ItemStack(Items.stick);
+		eyeOfEnderStack = new ItemStack(Items.ender_eye);
+		emeraldStack = new ItemStack(Items.emerald);
+		diamondStack = new ItemStack(Items.diamond);
+		cobblestoneStack = new ItemStack(Blocks.cobblestone);
+		coalStack = new ItemStack(Items.coal);
+		featherStack = new ItemStack(Items.feather);
+		stoneStack = new ItemStack(Blocks.stone);
+		flintStack = new ItemStack(Items.flint)
+
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.StoneSword),"S","s","s",'S',stoneStack,'s',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.HotSword),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.TPHitStick),"EEE","ESE","EEE",'E',eyeOfEnderStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.TPStick),"  E"," S ","S  ",'E',eyeOfEnderStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.MountainBlaster),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.BossDiamondSword),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.CoalDagger),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.CoalShard),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.CobblestoneDagger),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.CobblestoneShard),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.DiamondDagger),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.DiamondShard),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.DogFood),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldArrow),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldAxe),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldBow),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldDagger),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldHoe),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldPickaxe),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldShard),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldShovel),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.EmeraldSword),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.GoldDagger),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.GoldShard),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.Gun),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.IronDagger),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.IronShard),"","","",'D',diamondStack,'S',stickStack);
+		GameRegistry.addRecipe(new ItemStack(TutorialItems.NinjaStar),"","","",'D',diamondStack,'S',stickStack);
+	}
+	
+	@EventHandler
+	public void postInit(FMLPostInitializationEvent event){
+		
+	}
+	
+	public static final CreativeTabs tooManyItemsTab = new CreativeTabs("tooManyItemsTab"){
+		@Override
+		public Item getTabIconItem(){
+			return new ItemStack(TutorialItems.HotSword).getItem();
+		}
+	};
+}

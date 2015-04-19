@@ -1,0 +1,10 @@
+package com.patricklang.tutorial.proxy;
+
+import com.patricklang.tutorial.init.TutorialItems;
+
+public class ClientProxy extends CommonProxy {
+	@Override
+	public void registerRenders(){
+		TutorialItems.registerRenders();
+	}
+}
